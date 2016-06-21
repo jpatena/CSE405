@@ -1,0 +1,14 @@
+<h2/>Track2 Assignment</h2>
+<p>Page Views: <span id='page_views'></span></p>
+
+<script src="ajax.js"></script>
+<script>
+/*global ajax*/
+
+// call function from script to display response
+ajax('page_views.php', null, function(responseObject) {
+    document.getElementById('page_views').innerHTML = responseObject.counter;
+});
+</script>
+
+
